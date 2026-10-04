@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy by Fiza | Luxury Copywriting</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================
+       RESET & BASE
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: #08070b;
+      color: #fff;
+      line-height: 1.4;
+      overflow-x: hidden;
+    }
+
+    button, input, textarea, select {
+      font-family: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       VARIABLES
+    ========================= */
+    :root {
+      --black: #08070b;
+      --card: #14101b;
+      --lavender: #b98cff;
+      --lavender-light: #d6b8ff;
+      --white: #ffffff;
+      --gray: #aaa4b5;
+      --border: rgba(185, 140, 255, 0.18);
+      --red: #ff5c5c;
+    }
+
+    /* =========================
+       HEADER & NAVIGATION
+    ========================= */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(8, 7, 11, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      height: 60px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .logo-svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--lavender);
+    }
+
+    .logo span {
+      color: var(--lavender);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #d8d4df;
+      font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--lavender);
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: 0.3s;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-massive {
+      border-radius: 12px;
+      padding: 16px 32px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      color: #0c0810;
+      background: var(--lavender);
+    }
+
+    .btn-primary:hover {
+      background: var(--lavender-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      color: white;
+      background: transparent;
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--lavender);
+      color: var(--lavender);
+    }
+
+    .mobile-menu {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 22px;
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================= */
+    .hero {
+      min-height: calc(100vh - 60px);
+      padding: 40px 20px 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: rgba(145, 79, 255, 0.1);
+      filter: blur(80px);
+      border-radius: 50%;
+      top: 10px;
+      right: -80px;
+      z-index: 1;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--lavender-light);
+      background: rgba(185, 140, 255, 0.05);
+      font-size: 11px;
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 6.8vw, 82px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      color: var(--lavender);
+      display: inline-block;
+    }
+
+    .hero p {
+      color: var(--gray);
+      font-size: clamp(16px, 1.9vw, 20px);
+      line-height: 1.45;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* =========================
+       GLOBAL SECTIONS
+    ========================= */
+    section {
+      padding: 35px 20px;
+    }
+
+    .section-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 24px;
+      padding: 0 10px;
+    }
+
+    .section-heading small {
+      color: var(--lavender);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(26px, 3.5vw, 36px);
+      margin-top: 4px;
+    }
+
+    .section-heading p {
+      max-width: 520px;
+      margin: 6px auto 0;
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .service-card {
+      padding: 18px 14px;
+      background: linear-gradient(145deg, #17121f, #0e0b12);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(185, 140, 255, 0.4);
+    }
+
+    .service-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(185, 140, 255, 0.1);
+      color: var(--lavender);
+      margin-bottom: 10px;
+    }
+
+    .service-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card h3 {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .service-card p {
+      color: var(--gray);
+      font-size: 11px;
+    }
+
+    /* =========================
+       HOW IT WORKS
+    ========================= */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .step {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+    }
+
+    .step-number {
+      color: var(--lavender);
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .step h3 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .step p {
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    .payment-note {
+      text-align: center;
+      padding: 10px 14px;
+      background: rgba(255, 92, 92, 0.05);
+      border: 1px dashed rgba(255, 92, 92, 0.3);
+      border-radius: 8px;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 600;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* =========================
+       ABOUT US
+    ========================= */
+    .about-compact {
+      max-width: 650px;
+      margin: auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 18px;
+      text-align: center;
+    }
+
+    .about-logo-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .about-logo-wrapper span {
+      color: var(--lavender);
+    }
+
+    .about-compact p {
+      color: var(--gray);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .about-email-text {
+      color: var(--lavender-light);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      color: var(--lavender-light);
+      font-weight: 600;
+      font-size: 11px;
+      padding: 5px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: rgba(185, 140, 255, 0.04);
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background: var(--lavender);
+      color: var(--black);
+    }
+
+    /* =========================
+       PAGES LAYOUT
+    ========================= */
+    .page {
+      display: none;
+      padding-top: 60px;
+      min-height: 100vh;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* =========================
+       PACKAGES PAGE
+    ========================= */
+    .packages-page {
+      padding: 35px 20px;
+    }
+
+    .package-category-section {
+      max-width: 1200px;
+      margin: 0 auto 25px auto;
+    }
+
+    .package-category-title {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      color: var(--lavender);
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .package-card {
+      position: relative;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: linear-gradient(145deg, #17121f, #0e0b12);
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .package-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(185, 140, 255, 0.5);
+    }
+
+    .popular {
+      border-color: var(--lavender);
+    }
+
+    .popular-label {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--lavender);
+      color: #100a15;
+      padding: 2px 6px;
+      border-radius: 16px;
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .package-service {
+      color: var(--gray);
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .package-card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .price {
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .package-card ul {
+      list-style: none;
+      margin-bottom: 14px;
+    }
+
+    .package-card li {
+      color: var(--gray);
+      font-size: 11px;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .package-card li::before {
+      content: "✓";
+      color: var(--lavender);
+      margin-right: 5px;
+    }
+
+    .package-card .btn {
+      width: 100%;
+    }
+
+    /* =========================
+       PROJECT DETAILS PAGE
+    ========================= */
+    .details-page {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 16px;
+    }
+
+    .details-card {
+      width: 100%;
+      max-width: 450px;
+      padding: 24px 20px;
+      border: 1px solid var(--border);
+      background: linear-gradient(145deg, #17121f, #0e0b12);
+      border-radius: 14px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .details-card h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+
+    .details-card > p {
+      color: var(--gray);
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+
+    .payment-notice-banner {
+      background: rgba(255, 92, 92, 0.08);
+      border: 1px solid rgba(255, 92, 92, 0.3);
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 11px;
+      color: #ddd8e5;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      outline: none;
+      background: #0c0910;
+      color: white;
+      font-size: 12px;
+      transition: 0.3s;
+    }
+
+    .form-control:focus {
+      border-color: var(--lavender);
+    }
+
+    select.form-control {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b98cff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+      padding-right: 30px;
+    }
+
+    /* =========================
+       MODAL & TOAST
+    ========================= */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(6px);
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-card {
+      width: 100%;
+      max-width: 380px;
+      background: #130f19;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 18px;
+      position: relative;
+      text-align: center;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 18px;
+    }
+
+    .modal-card h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .modal-card p {
+      color: var(--gray);
+      font-size: 11px;
+      margin-bottom: 14px;
+    }
+
+    .toast {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 5000;
+      background: #17121f;
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 6px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: 0.3s;
+      max-width: 260px;
+      font-size: 11px;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 16px 20px;
+      text-align: center;
+      color: var(--gray);
+      font-size: 11px;
+    }
+
+    /* =========================
+       RESPONSIVE BREAKPOINTS
+    ========================= */
+    @media (max-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero p {
+        max-width: 550px;
+      }
+      .hero-image-wrapper {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #0d0a12;
+        flex-direction: column;
+        padding: 16px;
+        border-bottom: 1px solid var(--border);
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .navbar.mobile-open .nav-links {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      section {
+        padding: 28px 16px;
+      }
+
+      .services-grid, .steps, .packages-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <a href="#" class="logo" onclick="showPage('home')">
+        <svg class="logo-svg" viewBox="0 0 24 24">
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          <path d="M15 5.5l3.5 3.5"/>
+          <path d="M2 21h20"/>
+        </svg>
+        Copy <span>by Fiza</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('home')">Services</a></li>
+        <li><a href="#" onclick="showPage('home')">How It Works</a></li>
+        <li><a href="#" onclick="showPage('packages')">Packages</a></li>
+        <li><a href="#" onclick="showPage('home')">About Us</a></li>
+        <li><button class="btn btn-primary" onclick="showPage('packages')">Get Started</button></li>
+      </ul>
+
+      <button class="mobile-menu" onclick="toggleMobileMenu()">
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <!-- =========================
+       HOME PAGE
+  ========================= -->
+  <main id="home" class="page active">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">✦ Professional Copywriting Services </div>
+          <h1>Words That <span> Connect & Convert</span></h1>
+          <p>Strategic copywriting for brands that want to connect, engage, and grow</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary btn-massive" onclick="showPage('packages')">
+              Explore Packages →
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600" alt="Luxury Copywriting by Fiza">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="section-container">
+        <div class="section-heading">
+          <small>What I Do</small>
+          <h2>Our Services</h2>
+          <p>Professional copy created around your audience, brand voice and business goals.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <h3>Email Copy</h3>
+            <p>Emails designed to communicate clearly and encourage action.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+            </div>
+            <h3>Ads Copy</h3>
+            <p>Short, attention-grabbing copy for your advertising campaigns.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </div>
+            <h3>Social Media</h3>
+            <p>Captions and social copy that fit your brand's personality.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <h3>Product Description</h3>
+            <p>Product descriptions that explain value in a compelling way.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3>Website Copy</h3>
+            <p>Clear website messaging for modern brands and businesses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works">
+      <div class="section-container">
+        <div class="section-heading">
+          <small>Simple Process</small>
+          <h2>How It Works</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01 — CHOOSE</div>
+            <h3>Choose Your Package</h3>
+            <p>Select the service and package that matches your project.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">02 — ORDER</div>
+            <h3>Place Your Order</h3>
+            <p>Provide your project information and submit details.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">03 — RECEIVE & PAY</div>
+            <h3>Receive & Pay</h3>
+            <p>Your finished copy is delivered, and payment is processed after work done.</p>
+          </div>
+        </div>
+
+        <div class="payment-note">
+          Note: Only Payoneer payment accepted.
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about">
+      <div class="section-container">
+        <div class="about-compact">
+          <div class="about-logo-wrapper">
+            <svg class="logo-svg" viewBox="0 0 24 24">
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              <path d="M15 5.5l3.5 3.5"/>
+              <path d="M2 21h20"/>
+            </svg>
+            Copy <span>by Fiza</span>
+          </div>
+          <p>
+            At <strong>Copy by Fiza</strong>, we transform words into powerful brand narratives. From high-converting emails to persuasive website copy, we elevate your business voice with precision and style.
+          </p>
+          <div class="about-email-text">
+            Email: freelancewriter00987@gmail.com
+          </div>
+          <ul class="social-links">
+            <li><a href="https://www.instagram.com/freelancewriter00987?stkn=bDJhYmR0cXhxczJl" target="_blank">Instagram</a></li>
+            <li><a href="https://pin.it/pOoYBc4oV" target="_blank">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       PROJECT DETAILS PAGE
+  ========================= -->
+  <main id="details" class="page">
+    <div class="details-page">
+      <div class="details-card">
+        <h2>Project Details</h2>
+        <p id="selectedPackageInfo">Fill out details about your project.</p>
+
+        <div class="payment-notice-banner">
+          ⚠️ Note: Only Payoneer payment available.
+        </div>
+
+        <form id="detailsForm" action="https://formspree.io/f/xzezndpp" method="POST">
+          <div class="form-group">
+            <label for="clientName">Full Name</label>
+            <input class="form-control" id="clientName" name="clientName" type="text" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="clientEmail">Email Address</label>
+            <input class="form-control" id="clientEmail" name="clientEmail" type="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="projectTimeline">Desired Delivery Timeline</label>
+            <select class="form-control" id="projectTimeline" name="projectTimeline" required>
+              <option value="" disabled selected>Select timeline</option>
+              <option value="2-3 days">Within 2-3 days</option>
+              <option value="3-4 days">Within 3-4 days</option>
+              <option value="One week">Within one week</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="projectDesc">Project Brief / Details</label>
+            <textarea class="form-control" id="projectDesc" name="projectDesc" rows="3" placeholder="Tell us about your requirements..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            Submit Project Details →
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================
+       PACKAGES PAGE
+  ========================= -->
+  <main id="packages" class="page">
+    <section class="packages-page">
+      <div class="section-heading">
+        <small>Our Services & Packages</small>
+        <h2>Choose Your Package</h2>
+        <p>Select the service and package that fits your project.</p>
+      </div>
+
+      <!-- EMAIL COPY SECTION -->
+      <div class="package-category-section">
+        <h3 class="package-category-title">Email Copy Packages</h3>
+        <div class="packages-grid">
+          <div class="package-card">
+            <div>
+              <div class="package-service">Email Copy</div>
+              <h3>Basic</h3>
+              <div class="price">$15</div>
+              <ul>
+                <li>1 Email</li>
+                <li>Professional copy</li>
+                <li>1 revision</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Email Copy — Basic', 15)">Buy Now</button>
+          </div>
+
+          <div class="package-card popular">
+            <div class="popular-label">POPULAR</div>
+            <div>
+              <div class="package-service">Email Copy</div>
+              <h3>Popular</h3>
+              <div class="price">$30</div>
+              <ul>
+                <li>3 Emails</li>
+                <li>Professional copy</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-primary" onclick="openDetails('Email Copy — Popular', 30)">Buy Now</button>
+          </div>
+
+          <div class="package-card">
+            <div>
+              <div class="package-service">Email Copy</div>
+              <h3>Premium</h3>
+              <div class="price">$50</div>
+              <ul>
+                <li>5 Emails</li>
+                <li>Premium copy</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Email Copy — Premium', 50)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADS COPY SECTION -->
+      <div class="package-category-section">
+        <h3 class="package-category-title">Ads Copy Packages</h3>
+        <div class="packages-grid">
+          <div class="package-card">
+            <div>
+              <div class="package-service">Ads Copy</div>
+              <h3>Basic</h3>
+              <div class="price">$12</div>
+              <ul>
+                <li>1 Ad variation</li>
+                <li>Headline + body</li>
+                <li>1 revision</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Ads Copy — Basic', 12)">Buy Now</button>
+          </div>
+
+          <div class="package-card popular">
+            <div class="popular-label">POPULAR</div>
+            <div>
+              <div class="package-service">Ads Copy</div>
+              <h3>Popular</h3>
+              <div class="price">$35</div>
+              <ul>
+                <li>3 Ad variations</li>
+                <li>Multiple headlines</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-primary" onclick="openDetails('Ads Copy — Popular', 35)">Buy Now</button>
+          </div>
+
+          <div class="package-card">
+            <div>
+              <div class="package-service">Ads Copy</div>
+              <h3>Premium</h3>
+              <div class="price">$45</div>
+              <ul>
+                <li>5 Ad variations</li>
+                <li>Premium copy</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Ads Copy — Premium', 45)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOCIAL MEDIA SECTION -->
+      <div class="package-category-section">
+        <h3 class="package-category-title">Social Media Packages</h3>
+        <div class="packages-grid">
+          <div class="package-card">
+            <div>
+              <div class="package-service">Social Media</div>
+              <h3>Basic</h3>
+              <div class="price">$10</div>
+              <ul>
+                <li>5 captions</li>
+                <li>Hashtag suggestions</li>
+                <li>1 revision</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Social Media — Basic', 10)">Buy Now</button>
+          </div>
+
+          <div class="package-card popular">
+            <div class="popular-label">POPULAR</div>
+            <div>
+              <div class="package-service">Social Media</div>
+              <h3>Popular</h3>
+              <div class="price">$30</div>
+              <ul>
+                <li>15 captions</li>
+                <li>Content ideas</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-primary" onclick="openDetails('Social Media — Popular', 30)">Buy Now</button>
+          </div>
+
+          <div class="package-card">
+            <div>
+              <div class="package-service">Social Media</div>
+              <h3>Premium</h3>
+              <div class="price">$50</div>
+              <ul>
+                <li>30 captions</li>
+                <li>Content strategy</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Social Media — Premium', 50)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT DESCRIPTION SECTION -->
+      <div class="package-category-section">
+        <h3 class="package-category-title">Product Description Packages</h3>
+        <div class="packages-grid">
+          <div class="package-card">
+            <div>
+              <div class="package-service">Product Description</div>
+              <h3>Basic</h3>
+              <div class="price">$12</div>
+              <ul>
+                <li>3 products</li>
+                <li>SEO-friendly copy</li>
+                <li>1 revision</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Product Description — Basic', 12)">Buy Now</button>
+          </div>
+
+          <div class="package-card popular">
+            <div class="popular-label">POPULAR</div>
+            <div>
+              <div class="package-service">Product Description</div>
+              <h3>Popular</h3>
+              <div class="price">$35</div>
+              <ul>
+                <li>10 products</li>
+                <li>SEO copy</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-primary" onclick="openDetails('Product Description — Popular', 35)">Buy Now</button>
+          </div>
+
+          <div class="package-card">
+            <div>
+              <div class="package-service">Product Description</div>
+              <h3>Premium</h3>
+              <div class="price">$42</div>
+              <ul>
+                <li>18 products</li>
+                <li>SEO copy</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Product Description — Premium', 42)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEBSITE COPY SECTION -->
+      <div class="package-category-section">
+        <h3 class="package-category-title">Website Copy Packages</h3>
+        <div class="packages-grid">
+          <div class="package-card">
+            <div>
+              <div class="package-service">Website Copy</div>
+              <h3>Basic</h3>
+              <div class="price">$20</div>
+              <ul>
+                <li>1 website page</li>
+                <li>Professional copy</li>
+                <li>1 revision</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Website Copy — Basic', 20)">Buy Now</button>
+          </div>
+
+          <div class="package-card popular">
+            <div class="popular-label">POPULAR</div>
+            <div>
+              <div class="package-service">Website Copy</div>
+              <h3>Popular</h3>
+              <div class="price">$49</div>
+              <ul>
+                <li>3 website pages</li>
+                <li>SEO copy</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-primary" onclick="openDetails('Website Copy — Popular', 49)">Buy Now</button>
+          </div>
+
+          <div class="package-card">
+            <div>
+              <div class="package-service">Website Copy</div>
+              <h3>Premium</h3>
+              <div class="price">$55</div>
+              <ul>
+                <li>5 website pages</li>
+                <li>Premium SEO copy</li>
+                <li>3 revisions</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline" onclick="openDetails('Website Copy — Premium', 55)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- =========================
+       SUCCESS MODAL
+  ========================= -->
+  <div class="modal" id="successModal" onclick="closeModalOutside(event)">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeSuccessModal()">×</button>
+      <h2>Thank You!</h2>
+      <p>For further details, please connect with us via email.</p>
+      <button class="btn btn-primary" style="width:100%;" onclick="closeSuccessModal(); showPage('home');">
+        Back to Home
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Copy by Fiza. All rights reserved.
+  </footer>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+  <script>
+    let selectedPackage = null;
+
+    function showPage(pageId) {
+      document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+      });
+
+      const page = document.getElementById(pageId);
+      if (page) {
+        page.classList.add("active");
+      }
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+      closeMobileMenu();
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById("navbar").classList.toggle("mobile-open");
+    }
+
+    function closeMobileMenu() {
+      document.getElementById("navbar").classList.remove("mobile-open");
+    }
+
+    function openDetails(packageName, price) {
+      selectedPackage = { name: packageName, price: price };
+      
+      let packageInput = document.getElementById("hiddenPackageInput");
+      if (!packageInput) {
+        packageInput = document.createElement("input");
+        packageInput.type = "hidden";
+        packageInput.name = "selected_package";
+        packageInput.id = "hiddenPackageInput";
+        document.getElementById("detailsForm").appendChild(packageInput);
+      }
+      packageInput.value = `${packageName} ($${price})`;
+
+      document.getElementById("selectedPackageInfo").textContent = `Selected: ${packageName} ($${price}).`;
+      showPage("details");
+    }
+
+    document.getElementById("detailsForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const form = this;
+      const name = document.getElementById("clientName").value.trim();
+      const email = document.getElementById("clientEmail").value.trim();
+      const timeline = document.getElementById("projectTimeline").value;
+      const desc = document.getElementById("projectDesc").value.trim();
+
+      if (!name || !email || !timeline || !desc) {
+        showToast("Please fill in all fields.");
+        return;
+      }
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById("successModal").classList.add("show");
+          form.reset();
+        } else {
+          showToast("Oops! There was a problem submitting your form.");
+        }
+      }).catch(error => {
+        showToast("Oops! There was a connection error.");
+      });
+    });
+
+    function closeSuccessModal() {
+      document.getElementById("successModal").classList.remove("show");
+    }
+
+    function closeModalOutside(event) {
+      if (event.target.id === "successModal") {
+        closeSuccessModal();
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+    }
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        closeSuccessModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
